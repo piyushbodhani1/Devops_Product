@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('git repo & clean') {
             steps {
                 bat "git clone https://github.com/piyushbodhani1/Devops_Product.git"
                 bat "mvn clean -f Devops_Product"
