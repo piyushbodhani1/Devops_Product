@@ -4,17 +4,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                bat "git clone https://github.com/piyushbodhani1/Devops_Product.git"
+                bat "mvn clean -f Devops_Product"
             }
         }
-        stage('Test') {
+         stage('install') {
             steps {
-                echo 'Testing..'
+                bat "mvn install -f Devops_Product"
+            }
+        }
+        stage('test') {
+            steps {
+                 bat "mvn test -f Devops_Product"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                bat "mvn Deploy -f Devops_Product"
             }
         }
     }
