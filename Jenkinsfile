@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building for SIT'
+                echo 'Building for UAT'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing for SIT'
+                echo 'Testing for UAT'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying for SIT to UAT'
+                echo 'Deploying for UAT to PROD'
             }
         }
     }
