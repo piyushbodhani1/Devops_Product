@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building for DEV'
+                echo 'Building for SIT'
             }
         }
         stage('Test') {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying for DEV to SIT'
+                echo 'Deploying for SIT to UAT'
             }
         }
     }
