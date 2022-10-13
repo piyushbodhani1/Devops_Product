@@ -4,18 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building for UAT'
+                echo 'Building for PROD'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing for UAT'
+                echo 'Testing for PROD'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying for UAT to PROD'
+                echo 'Deploying forM PRODs'
             }
         }
     }
 }
+
