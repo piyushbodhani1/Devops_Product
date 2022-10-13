@@ -4,6 +4,10 @@ public class PrimeNumber {
 	public static boolean checkPrime(int num) {
 		boolean flag = false;
 
+		if (num == 0 || num == 1) {
+			return false;
+		}
+
 		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0) {
 				flag = true;
