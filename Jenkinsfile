@@ -18,10 +18,5 @@ pipeline {
                  bat "mvn test -f Devops_Product"
             }
         }
-        stage('Deploy') {
-            steps {
-                bat "mvn Deploy -f Devops_Product"
-            }
-        }
     }
 }
